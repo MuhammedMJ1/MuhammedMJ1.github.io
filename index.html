@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فولاذ ورماد · STEEL &amp; ASHES</title>
+<meta name="description" content="فولاذ ورماد: لعبة استراتيجية حربية في الوقت الحقيقي. STEEL & ASHES: a real-time war strategy game.">
+<meta property="og:title" content="فولاذ ورماد · STEEL & ASHES">
+<meta property="og:image" content="https://muhammedmj1.github.io/steel-and-ashes/media/og.jpg">
+<link rel="icon" href="https://muhammedmj1.github.io/steel-and-ashes/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #15171b; --panel: #1f2228; --line: #353a43; --text: #ece8df; --muted: #b5b0a5; --gold: #c9a35b; --gold2: #e2c07d; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: 'IBM Plex Sans Arabic', Tahoma, sans-serif; line-height: 1.7; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+  header { padding: 28px 0 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  header h1 { margin: 0; font-size: 30px; color: var(--gold2); }
+  header h1 span { display: block; font-size: 16px; color: var(--muted); letter-spacing: 2px; }
+  .lang button { font: inherit; font-size: 14px; padding: 4px 14px; border: 1px solid var(--line); background: var(--panel); color: var(--text); cursor: pointer; border-radius: 4px; }
+  .lang button[aria-pressed="true"] { border-color: var(--gold); color: var(--gold2); }
+  .hero { margin: 8px 0 18px; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+  .hero img { width: 100%; display: block; }
+  p.lead { font-size: 19px; margin: 0 0 18px; }
+  .stores { display: flex; gap: 12px; flex-wrap: wrap; margin: 0 0 28px; }
+  .store { flex: 1 1 220px; display: block; text-decoration: none; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; }
+  .store b { display: block; font-size: 18px; color: var(--gold2); }
+  .store small { color: var(--muted); }
+  .store[aria-disabled="true"] { opacity: .65; pointer-events: none; }
+  h2 { font-size: 22px; margin: 26px 0 10px; border-inline-start: 4px solid var(--gold); padding-inline-start: 10px; }
+  video { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--line); background: #000; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+  .grid a { display: block; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); }
+  .grid img { width: 100%; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+  footer { margin: 36px 0 0; padding: 18px 0 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; gap: 14px; flex-wrap: wrap; }
+  footer a { color: var(--muted); }
+  [lang="en"] .ar, [lang="ar"] .en { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>فولاذ ورماد<span>STEEL &amp; ASHES</span></h1>
+    <div class="lang"><button type="button" data-l="ar">العربية</button> <button type="button" data-l="en">English</button></div>
+  </header>
+
+  <div class="hero"><img src="https://muhammedmj1.github.io/steel-and-ashes/media/hero.webp" alt="فولاذ ورماد · STEEL & ASHES"></div>
+
+  <p class="lead"><span class="ar">لعبة استراتيجية حربية في الوقت الحقيقي. ابنِ قاعدتك، واجمع مواردك، وقُد جيشك حتى سلاحه النهائي.</span><span class="en">A real-time war strategy game. Build your base, gather your resources and lead your army all the way to its final weapon.</span></p>
+
+  <div class="stores">
+    <a class="store" id="play" href="#" aria-disabled="true"><b>Google Play</b><small><span class="ar">قريبًا</span><span class="en">Coming soon</span></small></a>
+    <a class="store" id="appstore" href="#" aria-disabled="true"><b>App Store</b><small><span class="ar">قريبًا</span><span class="en">Coming soon</span></small></a>
+    <a class="store" href="https://muhammedmj1.github.io/steel-and-ashes/"><b><span class="ar">صفحة اللعبة</span><span class="en">The game's page</span></b><small><span class="ar">الجيوش والمزايا بالتفصيل</span><span class="en">The armies and features in full</span></small></a>
+  </div>
+
+  <h2><span class="ar">المقطع الدعائي</span><span class="en">Trailer</span></h2>
+  <video controls playsinline preload="none" poster="https://muhammedmj1.github.io/steel-and-ashes/media/trailer_poster.jpg" src="https://muhammedmj1.github.io/steel-and-ashes/media/trailer.mp4"></video>
+
+  <h2><span class="ar">صور من اللعبة</span><span class="en">Screenshots</span></h2>
+  <div class="grid" id="shots"></div>
+
+  <footer>
+    <span>© 2026 فولاذ ورماد · STEEL &amp; ASHES</span>
+    <a href="https://muhammedmj1.github.io/steel-and-ashes/privacy.html"><span class="ar">سياسة الخصوصية</span><span class="en">Privacy Policy</span></a>
+    <a href="https://muhammedmj1.github.io/steel-and-ashes/terms.html"><span class="ar">شروط الاستخدام</span><span class="en">Terms of Service</span></a>
+    <a href="https://muhammedmj1.github.io/steel-and-ashes/delete-account.html"><span class="ar">حذف الحساب</span><span class="en">Delete your account</span></a>
+    <a href="mailto:muhammed94mj@gmail.com">muhammed94mj@gmail.com</a>
+  </footer>
+</div>
+<script>
+  var base = "https://muhammedmj1.github.io/steel-and-ashes/media/";
+  var shots = [["g1_battle","دبابات وسط دخان المعركة","Tanks in the smoke of battle"],["g2_nuclear_bomb","القنبلة النووية التكتيكية للصقر","The Falcon's tactical nuclear bomb"],["g3_chemical","الضربة الكيميائية للأشباح","The Ghosts' chemical strike"],["g4_silo","صاروخ الدرع الحديدي النووي يغادر صومعته","The Iron Shield's nuclear missile leaving its silo"],["g5_hangars","طائرات الصقر أمام حظائرها","Falcon jets in front of their hangars"],["g6_machine","آلة الموارد وجامعوها","The resource machine and its gatherers"],["g7_site","مبنى يرتفع في موقع البناء","A building rising on its site"],["g8_drone_dive","جنود يرمون أنفسهم أرضًا أمام درون انتحاري","Soldiers throw themselves down as a suicide drone comes in"],["g9_helicopter","مروحية الصقر فوق اشتباك في قرية","A Falcon helicopter over a village fight"]];
+  var grid = document.getElementById("shots");
+  shots.forEach(function (s) {
+    var a = document.createElement("a"); a.href = base + s[0] + ".webp"; a.target = "_blank"; a.rel = "noopener";
+    var img = document.createElement("img"); img.src = base + s[0] + "_t.webp"; img.loading = "lazy"; img.alt = s[1] + " / " + s[2];
+    a.appendChild(img); grid.appendChild(a);
+  });
+  function setLang(l) {
+    document.documentElement.lang = l; document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.l === l ? "true" : "false"); });
+    try { localStorage.setItem("lang", l); } catch (e) {}
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.l); }); });
+  var start = "ar";
+  try { start = new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang") || "ar"; } catch (e) {}
+  setLang(start === "en" ? "en" : "ar");
+</script>
+</body>
+</html>
